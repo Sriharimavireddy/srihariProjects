@@ -1,0 +1,58 @@
+.box{
+    max-width: 360px;
+    text-align: center;
+    margin: auto;
+    background: midnightblue;
+    color: white;
+    padding: 16px;
+    border-radius: 38px;
+}
+
+.App{
+    min-height: 100vh;
+    background-image: url(/sfsites/c/resource/bmicalculatorbg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-size: 36px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.info-wrapper{
+background: linear-gradient(45deg, black, transparent);
+    padding: 16px;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    font-size: 14px;
+    text-align: center;
+}
+h2{
+    font-size: 18px;
+    color: orangered;
+}
+label{
+    color: white;
+    font-size: large;
+    padding-bottom: 5px;
+}
+input{
+    color: black;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.custom-button{
+    font-size: 16px;
+    padding: 10px;
+    background: deeppink;
+    color: white;
+    border-color: deeppink;
+}
+
+.result-value{
+    font-size: 20px;
+    color: lime;
+    padding: 10px;
+}
