@@ -1,0 +1,53 @@
+<template>
+    <div class="Currency-app">
+        <div class="container">
+            <div class="slds-card custom-label">
+                <form onsubmit={onsubmitHandler}>
+                <h1 class="slds-text-heading_large slds-text-color_inverse slds-text-align_center slds-m-bottom_large slds-m-top_medium">Currency Converter</h1>
+                <!--Image will come here-->
+                <img src={currencyImage} alt="img render error issue" height="150" width="150">
+                <lightning-input type="number" name="amount" label="amount" placeholder="Enter amount" 
+                variant="label-hidden" required class="slds-m-vertical_medium" onchange={handleChange}></lightning-input>
+
+                <div class="slds-grid slds-gutters baseline">
+                    <div class="slds-col">
+                        <lightning-combobox
+                        name="countryFrom"
+                        label="From"
+                        value={countryFrom}
+                        placeholder="Currency"
+                        variant="label-hidden"
+                        options={countryList}
+                        onchange={handleChange} ></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-text-align_center slds-m-vertical_x-large">
+                        <lightning-icon class="custom-icon" icon-name='action:change_record_type' 
+                        alternative-text='change_record_type' size='small' title='convert icon'></lightning-icon>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-combobox
+                        name="countryTo"
+                        label="To"
+                        value={countryTo}
+                        placeholder="Currency"
+                        variant="label-hidden"
+                        options={countryList}
+                        onchange={handleChange} ></lightning-combobox>
+                    </div>
+                    </div>
+                    <div class="slds-text-align_center">
+                        <template if:true={result}>
+                            <div class="result">{amount} {countryFrom} = <span class="result-to"> {result} {countryTo}</span></div>
+                        </template>
+                        <template if:true={error}>
+                        <div class="result">{error}</div>
+                    </template>
+                    </div>
+
+                    <button type="submit" class="slds-button slds-button_neutral slds-button_stretch slds-m-around_medium custom-button">Convert</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</template>
